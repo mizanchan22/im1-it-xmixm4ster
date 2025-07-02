@@ -7,7 +7,7 @@ use CodeIgniter\CLI\CLI;
 
 class MasterInstall extends BaseCommand
 {
-    protected $group       = 'IM1';
+    protected $group       = 'im1';
     protected $name        = 'im1:run';
     protected $description = 'Run the IM1 Master Installer Utk Dapat Semua Library';
 
