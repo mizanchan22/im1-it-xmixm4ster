@@ -1,0 +1,28 @@
+{
+    "name": "mizanchan22/im1-it-xmixm4ster",
+    "description": "shh",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "IM1\\MasterInstaller\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1",
+        "mizanchan22/im1-it-xmixth3me": "^1.0.0"
+    },
+    "authors": [
+        {
+            "name": "hamizannorwan",
+            "email": "hamizannorwan@gmail.com"
+        }
+    ],
+    "extra": {
+        "codeigniter4": {
+            "commands": {
+                "im1:run": "IM1\\MasterInstaller\\Commands\\MasterInstall"
+            }
+        }
+    }
+}
