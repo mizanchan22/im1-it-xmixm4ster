@@ -7,7 +7,7 @@ use CodeIgniter\CLI\CLI;
 
 class MasterInstall extends BaseCommand
 {
-    protected $group       = 'im1';
+    protected $group       = 'IM1';
     protected $name        = 'im1:run';
     protected $description = 'Run the IM1 Master Installer Utk Dapat Semua Library';
 
@@ -37,25 +37,33 @@ class MasterInstall extends BaseCommand
 
         CLI::newLine();
 
-        $option = CLI::prompt('Select option', [
-            'Install Template',
-            'Install Module',
-            'Exit'
-        ]);
+        CLI::write('Sila pilih nak buat yang mana:');
+        CLI::write('  [1] Install Template?');
+        CLI::write('  [2] Install Module?');
+        CLI::write('  [3] Exit');
+                CLI::write();
 
-        switch ($option) {
-            case 'Install Theme':
-                CLI::write('Installing Theme...');
-                \CodeIgniter\CLI\Commands::run('im1:theme');
+        $input = CLI::prompt('Enter number (1-3)');
+
+        switch ($input) {
+            case '1':
+                CLI::write();
+                CLI::write('Redirect gi theme template... tunggu jap...','yellow');
+                $this->call('im1:theme');
                 break;
 
-            case 'Install Module':
+            case '2':
                 CLI::write('Installing Module...');
                 break;
 
-            case 'Exit':
+            case '3':
                 CLI::write('Goodbye!');
                 break;
+
+            default:
+                CLI::error('Invalid input.');
+                break;
         }
+
     }
 }

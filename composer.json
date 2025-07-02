@@ -18,8 +18,16 @@
             "email": "hamizannorwan@gmail.com"
         }
     ],
+    "scripts": {
+    "post-autoload-dump": [
+        "CodeIgniter\\ComposerScripts::postAutoloadDump"
+    ]
+},
     "extra": {
         "codeigniter4": {
+             "discoveries": {
+            "commands": true
+        },
             "commands": {
                 "im1:run": "IM1\\MasterInstaller\\Commands\\MasterInstall"
             }
