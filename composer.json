@@ -10,7 +10,8 @@
     },
     "require": {
         "php": "^8.1",
-        "mizanchan22/im1-it-xmixth3me": "^1.0.0"
+        "mizanchan22/im1-it-xmixth3me": "^1.0.0",
+        "mizanchan22/im1-it-xmixl0g1n": "^1.0.0"
     },
     "authors": [
         {

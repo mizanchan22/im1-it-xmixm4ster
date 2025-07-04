@@ -38,8 +38,8 @@ class MasterInstall extends BaseCommand
         CLI::newLine();
 
         CLI::write('Sila pilih nak buat yang mana:');
-        CLI::write('  [1] Install Template?');
-        CLI::write('  [2] Install Module?');
+        CLI::write('  [1] Install Template Dashboard?');
+        CLI::write('  [2] Install Login?');
         CLI::write('  [3] Exit');
                 CLI::write();
 
@@ -53,7 +53,8 @@ class MasterInstall extends BaseCommand
                 break;
 
             case '2':
-                CLI::write('Installing Module...');
+                CLI::write('Redirect cari login...');
+                $this->call('im1:login');
                 break;
 
             case '3':
